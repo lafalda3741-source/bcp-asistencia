@@ -40,11 +40,10 @@ export default function Employees() {
     );
   }, [empleados, busqueda]);
 
-  function enlaceEmpleado(token) {
-    const base = "https://vercel.app";
+    function enlaceEmpleado(token) {
+    const base = "https://bcp-asistencia-btva.vercel.app";
     return `${base}/empleado/${token}`;
   }
-
   async function copiarEnlace(emp) {
     try {
       await navigator.clipboard.writeText(enlaceEmpleado(emp.token_acceso));
