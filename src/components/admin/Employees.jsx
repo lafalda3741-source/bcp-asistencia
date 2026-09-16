@@ -41,7 +41,8 @@ export default function Employees() {
   }, [empleados, busqueda]);
 
   function enlaceEmpleado(token) {
-    return `${window.location.origin}/empleado/${token}`;
+    const base = (import.meta.env.VITE_APP_URL || window.location.origin).replace(/\/+$/, '');
+    return `${base}/empleado/${token}`;
   }
 
   async function copiarEnlace(emp) {
