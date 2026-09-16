@@ -41,7 +41,7 @@ export default function Employees() {
   }, [empleados, busqueda]);
 
   function enlaceEmpleado(token) {
-    const base = (import.meta.env.VITE_APP_URL || window.location.origin).replace(/\/+$/, '');
+    const base = "https://vercel.app";
     return `${base}/empleado/${token}`;
   }
 
